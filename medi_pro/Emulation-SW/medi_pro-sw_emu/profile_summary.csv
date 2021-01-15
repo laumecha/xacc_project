@@ -1,0 +1,132 @@
+Profile Summary
+Generated on: 2021-01-14 20:04:17
+Msec since Epoch: 1610654657419
+Profiled application: medi_pro
+Target platform: 
+Tool version: 2020.1
+XRT build version: 2.6.0
+Build version branch: 2020.1
+Build version hash: 12115fd4054cb46a5ade62fafa74c523f59116e6
+Build version date: 2020-07-09 15:20:59 
+Target devices: xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0
+Flow mode: Software Emulation
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clFinish,2,289813,0.006415,144906,289813,
+clEnqueueReadBuffer,1,61103.1,61103.1,61103.1,61103.1,
+clReleaseContext,1,5002.37,5002.37,5002.37,5002.37,
+clCreateProgramWithBinary,1,17.7849,17.7849,17.7849,17.7849,
+clEnqueueWriteBuffer,3,9.20412,0.061385,3.06804,4.94193,
+clCreateKernel,2,2.503,1.23656,1.2515,1.26644,
+clReleaseKernel,2,2.45493,0.771676,1.22746,1.68325,
+clSetKernelArg,10,0.538036,0.004557,0.0538036,0.15277,
+clEnqueueTask,2,0.34449,0.12836,0.172245,0.21613,
+clReleaseMemObject,6,0.127014,0.005252,0.021169,0.06011,
+clReleaseProgram,1,0.076921,0.076921,0.076921,0.076921,
+clCreateBuffer,6,0.066551,0.005025,0.0110918,0.034752,
+clGetPlatformIDs,2,0.06515,0.005184,0.032575,0.059966,
+clReleaseEvent,4,0.038634,0.006336,0.0096585,0.012509,
+clCreateContext,1,0.017621,0.017621,0.017621,0.017621,
+clCreateCommandQueue,1,0.016032,0.016032,0.016032,0.016032,
+clReleaseDevice,2,0.015099,0.00527,0.0075495,0.009829,
+clGetDeviceIDs,2,0.014337,0.004766,0.0071685,0.009571,
+clGetDeviceInfo,2,0.014159,0.006385,0.0070795,0.007774,
+clGetPlatformInfo,2,0.010185,0.00463,0.0050925,0.005555,
+clRetainDevice,2,0.009568,0.004458,0.004784,0.00511,
+clReleaseCommandQueue,1,0.009026,0.009026,0.009026,0.009026,
+
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+medianblur_accel,1,289785,289785,289785,289785,
+paintmask_accel,1,61025.3,61025.3,61025.3,61025.3,
+
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Dataflow Execution,Max Overlapping Executions,Dataflow Acceleration,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,medianblur_accel_1,medianblur_accel,1:1:1,1:1:1,1,No,0,1.000000x,289784,289784,289784,289784,300,
+xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,paintmask_accel_1,paintmask_accel,1:1:1,1:1:1,1,No,0,1.000000x,61025.1,61025.1,61025.1,61025.1,300,
+
+
+Data Transfer: Host to Global Memory
+Context:Number of Devices,Transfer Type,Number Of Buffer Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Buffer Size (KB),Total Time (ms),Average Time (ms),
+
+
+Data Transfer: Kernels to Global Memory
+Device,Compute Unit/Port Name,Kernel Arguments,Memory Resources,Transfer Type,Number Of Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Size (KB),Average Latency (ns),
+
+
+Top Data Transfer: Kernels to Global Memory
+Device,Compute Unit,Number of Transfers,Average Bytes per Transfer,Transfer Efficiency (%),Total Data Transfer (MB),Total Write (MB),Total Read (MB),Total Transfer Rate (MB/s),
+
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+11643440,medianblur_accel,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,154.148,289785,1:1:1,1:1:1,
+11593504,paintmask_accel,0,0,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,289988,61025.3,1:1:1,1:1:1,
+
+
+Top Memory Writes: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+16592896,0,0,289945,N/A,16588.8,N/A,
+0,0,0,126.086,N/A,8294.4,N/A,
+
+
+Top Memory Reads: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+33181696,0,0,351013,N/A,8294.4,N/A,
+
+
+Guidance Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0,350859.052905,
+CU_CALLS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|medianblur_accel_1,1,
+CU_CALLS,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|paintmask_accel_1,1,
+MIGRATE_MEM,host,0,
+PLRAM_DEVICE,all,1,
+HBM_DEVICE,all,0,
+KDMA_DEVICE,all,0,
+P2P_DEVICE,all,0,
+P2P_HOST_TRANSFERS,host,0,
+PORT_BIT_WIDTH,paintmask_accel_1/m_axi_gmem0,8,
+PORT_BIT_WIDTH,paintmask_accel_1/m_axi_gmem1,8,
+PORT_BIT_WIDTH,paintmask_accel_1/m_axi_gmem2,8,
+PORT_BIT_WIDTH,paintmask_accel_1/m_axi_gmem3,8,
+PORT_BIT_WIDTH,medianblur_accel_1/m_axi_gmem0,32,
+PORT_BIT_WIDTH,medianblur_accel_1/m_axi_gmem1,32,
+KERNEL_COUNT,medianblur_accel,1,
+KERNEL_COUNT,paintmask_accel,1,
+OBJECTS_RELEASED,all,1,
+TRACE_MEMORY,all,NA,
+CU_CONTEXT_EN,all,0,
+MAX_PARALLEL_KERNEL_ENQUEUES,medianblur_accel,1,
+MAX_PARALLEL_KERNEL_ENQUEUES,paintmask_accel,1,
+COMMAND_QUEUE_OOO,11379408,0,
+KERNEL_BUFFER_INFO,paintmask_accel|img_in||1,8294400,
+KERNEL_BUFFER_INFO,paintmask_accel|mask_in||1,8294400,
+KERNEL_BUFFER_INFO,paintmask_accel|color||1,8294400,
+KERNEL_BUFFER_INFO,paintmask_accel|img_out||1,8294400,
+KERNEL_BUFFER_INFO,medianblur_accel|img_in||1,8294400,
+KERNEL_BUFFER_INFO,medianblur_accel|img_out||1,8294400,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_aws-vu9p-f1_shell-v04261818_201920_2-0|PLRAM,512,
+XRT_INI_SETTING,continuous_trace,0,
+XRT_INI_SETTING,continuous_trace_interval_ms,10,
+XRT_INI_SETTING,data_transfer_trace,off,
+XRT_INI_SETTING,launch_waveform,batch,
+XRT_INI_SETTING,lop_trace,0,
+XRT_INI_SETTING,power_profile,0,
+XRT_INI_SETTING,profile,1,
+XRT_INI_SETTING,stall_trace,off,
+XRT_INI_SETTING,timeline_trace,1,
+XRT_INI_SETTING,trace_buffer_size,1M,
+XRT_INI_SETTING,verbosity,4,
+BUFFER_RD_ACTIVE_TIME_MS,all,34.7479,
+BUFFER_WR_ACTIVE_TIME_MS,all,70.8209,
+BUFFER_TX_ACTIVE_TIME_MS,all,350922,
+APPLICATION_RUN_TIME_MS,all,356298,
+TOTAL_KERNEL_RUN_TIME_MS,all,350859,
+
+

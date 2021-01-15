@@ -1,0 +1,43 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_interface -default_slave_interface=s_axilite
+INFO: [HLS 200-435] Setting 'config_flow -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.08ns.
+INFO: [HLS 200-10] Analyzing design file '/home/centos/workspace/medi_pro/src/xf_paintmask_accel.cpp' ... 
+WARNING: [HLS 207-5324] unused parameter 'index': /home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:655:87
+WARNING: [HLS 207-5324] unused parameter 'index': /home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:675:60
+WARNING: [HLS 207-5324] unused parameter 'index': /home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1183:102
+WARNING: [HLS 207-5324] unused parameter 'index': /home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1386:34
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' target.
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::stream()' into 'hls::stream<ap_uint<8>, 2>::stream()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:188:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 2>::stream()' into 'xf::cv::Mat<0, 2160, 3840, 1, 2>::Mat(int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:443:5)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::init(int, int, bool)' into 'xf::cv::Mat<0, 2160, 3840, 1, 2>::Mat(int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:642:2)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::MMIterIn<8, 0, 2160, 3840, 1, 2>::Axi2AxiStream(ap_uint<8>*, hls::stream<ap_uint<8>, 0>&, ap_uint<24>&)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1008:7)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read(ap_uint<8>&)' into 'hls::stream<ap_uint<8>, 0>::read()' (/opt/Xilinx/Vitis/2020.1/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::MMIterIn<8, 0, 2160, 3840, 1, 2>::AxiStream2MatStream(hls::stream<ap_uint<8>, 0>&, hls::stream<ap_uint<8>, 2>&, int, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1060:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::MMIterIn<8, 0, 2160, 3840, 1, 2>::AxiStream2MatStream(hls::stream<ap_uint<8>, 0>&, hls::stream<ap_uint<8>, 2>&, int, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1053:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::stream()' into 'xf::cv::MMIterIn<8, 0, 2160, 3840, 1, 2>::Axi2Mat(ap_uint<8>*, hls::stream<ap_uint<8>, 2>&, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1114:35)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::Mat<0, 2160, 3840, 1, 2>::read(int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:657:17)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::Mat<0, 2160, 3840, 1, 2>::write(int, ap_uint<8>)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:677:10)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Scalar<1, unsigned char>::Scalar()' into 'void xf::cv::paintmask<0, 0, 2160, 3840, 1>(xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, unsigned char*)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/imgproc/xf_paintmask.hpp:111:66)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::MMIterOut<8, 0, 2160, 3840, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<8>, 2>&, hls::stream<ap_uint<8>, 0>&, int, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1270:18)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::write(ap_uint<8> const&)' into 'xf::cv::MMIterOut<8, 0, 2160, 3840, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<8>, 2>&, hls::stream<ap_uint<8>, 0>&, int, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1261:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::MMIterOut<8, 0, 2160, 3840, 1, 2>::MatStream2AxiStream(hls::stream<ap_uint<8>, 2>&, hls::stream<ap_uint<8>, 0>&, int, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1254:46)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::read()' into 'xf::cv::MMIterOut<8, 0, 2160, 3840, 1, 2>::AxiStream2Axi(hls::stream<ap_uint<8>, 0>&, ap_uint<8>*, ap_uint<24>&)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1310:16)
+INFO: [HLS 214-131] Inlining function 'hls::stream<ap_uint<8>, 0>::stream()' into 'xf::cv::MMIterOut<8, 0, 2160, 3840, 1, 2>::Mat2Axi(hls::stream<ap_uint<8>, 2>&, ap_uint<8>*, int, int)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_structs.hpp:1337:35)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::Mat(int, int)' into 'paintmask_accel' (/home/centos/workspace/medi_pro/src/xf_paintmask_accel.cpp:37:45)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::Mat(int, int)' into 'paintmask_accel' (/home/centos/workspace/medi_pro/src/xf_paintmask_accel.cpp:38:48)
+INFO: [HLS 214-131] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::Mat(int, int)' into 'paintmask_accel' (/home/centos/workspace/medi_pro/src/xf_paintmask_accel.cpp:39:48)
+INFO: [HLS 214-178] Inlining function 'xf::cv::MMIterIn<8, 0, 2160, 3840, 1, 2>::Array2xfMat(ap_uint<8>*, xf::cv::Mat<0, 2160, 3840, 1, 2>&) (.46.52)' into 'void xf::cv::Array2xfMat<8, 0, 2160, 3840, 1>(ap_uint<8>*, xf::cv::Mat<0, 2160, 3840, 1, 2>&)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_utility.hpp:518:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::read(int)' into 'void xf::cv::xFpaintmaskKernel<0, 0, 2160, 3840, 0, 1, 1, 1, 1, 3840>(xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Scalar<DataType<0, 1>::channel, unsigned char>&, unsigned short, unsigned short)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/imgproc/xf_paintmask.hpp:50:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::read(int)' into 'void xf::cv::xFpaintmaskKernel<0, 0, 2160, 3840, 0, 1, 1, 1, 1, 3840>(xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Scalar<DataType<0, 1>::channel, unsigned char>&, unsigned short, unsigned short)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/imgproc/xf_paintmask.hpp:50:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1, 2>::write(int, ap_uint<8>)' into 'void xf::cv::xFpaintmaskKernel<0, 0, 2160, 3840, 0, 1, 1, 1, 1, 3840>(xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Mat<0, 2160, 3840, 1, 2>&, xf::cv::Scalar<DataType<0, 1>::channel, unsigned char>&, unsigned short, unsigned short)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/imgproc/xf_paintmask.hpp:50:0)
+INFO: [HLS 214-178] Inlining function 'xf::cv::MMIterOut<8, 0, 2160, 3840, 1, 2>::xfMat2Array(xf::cv::Mat<0, 2160, 3840, 1, 2>&, ap_uint<8>*)' into 'void xf::cv::xfMat2Array<8, 0, 2160, 3840, 1>(xf::cv::Mat<0, 2160, 3840, 1, 2>&, ap_uint<8>*)' (/home/centos/workspace/medi_pro/libs/xf_opencv/L1/include/common/xf_utility.hpp:508:0)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="link" dir="">
+  <FileSets>
+    <FileSet Name="kernel_medianblur_accel" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/medi_pro/Emulation-SW/krnl_medianblur.build/link/int/xo/medianblur_accel/medianblur_accel/cpu_sources/xf_median_blur_accel.cpp"/>
+      <Config/>
+    </FileSet>
+    <FileSet Name="kernel_paintmask_accel" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/medi_pro/Emulation-SW/krnl_medianblur.build/link/int/xo/paintmask_accel/paintmask_accel/cpu_sources/xf_paintmask_accel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

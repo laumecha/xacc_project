@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="paintmask_accel" dir="">
+  <FileSets>
+    <FileSet Name="kernel_paintmask_accel" Type="DesignSrcs">
+      <File Path="/home/centos/workspace/medi_pro/src/xf_paintmask_accel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

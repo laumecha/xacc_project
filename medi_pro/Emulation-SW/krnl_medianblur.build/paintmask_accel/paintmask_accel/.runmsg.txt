@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: paintmask_accel
+Log file: /home/centos/workspace/medi_pro/Emulation-SW/krnl_medianblur.build/paintmask_accel/paintmask_accel/vitis_hls.log

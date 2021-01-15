@@ -1,0 +1,6 @@
+2021-01-14T20:11:19.50425800255-20:11:19 **** Incremental Build of configuration Emulation-SW for project medi_pro ****
+000-make -j8 incremental 
+000-make: Nothing to be done for `incremental'.
+00255-
+20:11:19 Build Finished (took 81ms)
+

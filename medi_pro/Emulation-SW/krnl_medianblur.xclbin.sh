@@ -1,0 +1,1 @@
+/opt/Xilinx/Vitis/2020.1/bin/v++ --target sw_emu --link --config common-config.cfg --config krnl_medianblur-link.cfg -okrnl_medianblur.xclbin krnl_medianblur.build/medianblur_accel.xo krnl_medianblur.build/paintmask_accel.xo

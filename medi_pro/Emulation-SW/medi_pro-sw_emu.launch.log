@@ -1,0 +1,12 @@
+INFO: Running OpenCL section.
+Found Platform
+Platform Name: Xilinx
+INFO: Device found - xilinx_aws-vu9p-f1_shell-v04261818_201920_2
+XCLBIN File Name: krnl_medianblur
+INFO: Importing ../krnl_medianblur.xclbin
+Loading: '../krnl_medianblur.xclbin'
+1n kernel
+2n kernel
+Minimum error in intensity = 6.000000
+Maximum error in intensity = 254.000000
+Percentage of pixels above error threshold = 99.987221

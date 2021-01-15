@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="paintmask_accel" LaunchDir="/home/centos/workspace/medi_pro/Emulation-SW/krnl_medianblur.build/paintmask_accel/paintmask_accel" FlowId="Build_IP" FromStepId="vitis_hls" ToStepId="vitis_hls"/>
+</Runs>
+
