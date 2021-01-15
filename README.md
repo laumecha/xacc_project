@@ -1,4 +1,4 @@
-# XACC accelerator merging project
+# XACC filter_combining project
 
 This project was realised in the context of the Xilinx Adaptive Compute Cluster program.
 The development tool used is the Xilinx Vitis platform.
